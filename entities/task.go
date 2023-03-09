@@ -30,11 +30,11 @@ func NewTask(id string, name string, description string,
 
 func (t Task) Print() {
 	fmt.Println(
-		t.id + "\t" +
-			t.name + "\t" +
-			t.description + "\t" +
-			t.state.String() + "\t" +
-			t.beginDate.String() + "\t" +
-			t.finishedDate.String() + "\t" +
+		t.id + "\t |" +
+			t.name + "\t |" +
+			t.description + "\t |" +
+			t.state.String() + "\t |" +
+			t.beginDate.String() + "\t |" +
+			t.finishedDate.String() + "\t |" +
 			t.priority.String() + "\t")
 }
