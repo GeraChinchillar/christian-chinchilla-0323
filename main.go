@@ -3,7 +3,6 @@ package main
 import (
 	"chinchilla-christian-0323/entities"
 	"chinchilla-christian-0323/todolist"
-	"fmt"
 )
 
 func main() {
@@ -24,6 +23,4 @@ func main() {
 	newToDoList := todolist.NewToDoList([]entities.Task{tsk1, tsk2, tsk3, tsk4})
 	newToDoList.PrintTasks()
 
-	fmt.Println(pendantState.)
-	fmt.Println(lowPriority.String())
 }
