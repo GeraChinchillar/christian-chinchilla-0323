@@ -1,46 +1,29 @@
 package main
 
-import "time"
+import (
+	"chinchilla-christian-0323/entities"
+	"chinchilla-christian-0323/todolist"
+	"fmt"
+)
 
 func main() {
 
-	task1 := Task{
-		id:           "1",
-		name:         "",
-		description:  "",
-		state:        nil,
-		beginDate:    time.Time{},
-		finishedDate: time.Time{},
-		priority:     Priority{},
-	}
+	pendantState := entities.Pendant{}
+	pendantState.SetStateId(1)
+	pendantState.SetStateName("Pendant")
 
-	task2 := Task{
-		id:           "2",
-		name:         "",
-		description:  "",
-		state:        nil,
-		beginDate:    time.Time{},
-		finishedDate: time.Time{},
-		priority:     Priority{},
-	}
-	task3 := Task{
-		id:           "3",
-		name:         "",
-		description:  "",
-		state:        nil,
-		beginDate:    time.Time{},
-		finishedDate: time.Time{},
-		priority:     Priority{},
-	}
-	task4 := Task{
-		id:           "4",
-		name:         "",
-		description:  "",
-		state:        nil,
-		beginDate:    time.Time{},
-		finishedDate: time.Time{},
-		priority:     Priority{},
-	}
+	lowPriority := entities.Low{}
+	lowPriority.SetPriorityId(1)
+	lowPriority.SetPriorityName("Pendant")
 
-	newToDoList := toDoList{tasks: []Task{task1, task2, task3, task4}}
+	tsk1 := entities.NewTask("1", "Task1", "Task1", pendantState, lowPriority)
+	tsk2 := entities.NewTask("2", "Task1", "Task1", pendantState, lowPriority)
+	tsk3 := entities.NewTask("3", "Task1", "Task1", pendantState, lowPriority)
+	tsk4 := entities.NewTask("4", "Task1", "Task1", pendantState, lowPriority)
+
+	newToDoList := todolist.NewToDoList([]entities.Task{tsk1, tsk2, tsk3, tsk4})
+	newToDoList.PrintTasks()
+
+	fmt.Println(pendantState.)
+	fmt.Println(lowPriority.String())
 }
